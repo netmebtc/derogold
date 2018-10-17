@@ -43,11 +43,11 @@ const uint64_t LWMA_2_DIFFICULTY_BLOCK_INDEX_V3              = 3;
 const uint64_t DIFFICULTY_WINDOW_V3                          = 60;
 const uint64_t DIFFICULTY_BLOCKS_COUNT_V3                    = DIFFICULTY_WINDOW_V3 + 1;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 19;
+const unsigned EMISSION_SPEED_FACTOR                         = 18;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(3000000000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 
 /* How to generate a premine:
 * Compile your code
@@ -61,7 +61,7 @@ TurtleCoind --print-genesis-tx --genesis-block-reward-address TRTLv2Fyavy8CXG8BP
 * Recompile, setup your seed nodes, and start mining
 * You should see your premine appear in the previously generated wallet.
 */
-const char     GENESIS_COINBASE_TX_HEX[]                     = "011401ff000180e0bcefa75702a42a770f4dae084d5a781fd0844ac1ab0147f36f8291f57c362b543ac2df0b8a2101c9790e2fc1f7e29e902bf414b8bf5ca9a58a3afed8446af7dbb93b2e79d0eded";
+const char     GENESIS_COINBASE_TX_HEX[]                     = "";
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
    You can get this value by doing "print_block 2" in TurtleCoind. It is used to know what timestamp

@@ -223,8 +223,8 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-  "95.179.176.10:11974", //Cyprus-1
-  "45.77.230.58:11974", //Cyprus-3
-  "149.28.177.50:11974", //Cyprus-4
+  "209.250.231.233:11974", //Cyprus-1
+  "199.247.5.49:11974", //Cyprus-3
+  "108.61.123.176:11974", //Cyprus-4
 };
 } // CryptoNote

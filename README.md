@@ -1,4 +1,4 @@
-![image](https://github.com/CyprusCoinClub/CyprusCoin/blob/development/icon.png)
+![image](https://github.com/CyprusCoinClub/CyprusCoin/blob/development/CyprusCoin-Banner.png)
 
 
 

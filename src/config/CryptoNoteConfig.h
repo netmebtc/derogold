@@ -83,13 +83,13 @@ const uint64_t MAXIMUM_MIXIN_V1                              = 3;
 const uint64_t MINIMUM_MIXIN_V2                              = 3;
 const uint64_t MAXIMUM_MIXIN_V2                              = 3;
 
-const uint64_t MINIMUM_MIXIN_V3                              = 7;
-const uint64_t MAXIMUM_MIXIN_V3                              = 7;
+const uint64_t MINIMUM_MIXIN_V3                              = 3;
+const uint64_t MAXIMUM_MIXIN_V3                              = 3;
 
 /* The heights to activate the mixin limits at */
 const uint32_t MIXIN_LIMITS_V1_HEIGHT                        = 0;
-const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 10000;
-const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 50000;
+const uint32_t MIXIN_LIMITS_V2_HEIGHT                        = 520000; // aprox 1yr from launch at 60s blocks
+const uint32_t MIXIN_LIMITS_V3_HEIGHT                        = 1040000; // aprox 2yrs from launch at 60s blocks
 
 /* The mixin to use by default with zedwallet and turtle-service */
 /* DEFAULT_MIXIN_V0 is the mixin used before MIXIN_LIMITS_V1_HEIGHT is started */
@@ -146,6 +146,12 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] =
 {
+    50000,  // 0  **HERE**
+    130000,  // 1 130,000 blocks is approx 3 months >> 1 block / min, 60/hr, etc
+    260000,  // 2
+    390000,  // 3
+    520000,  // 4
+    650000,  // 5
 };
 
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
@@ -155,7 +161,7 @@ const uint64_t FORK_HEIGHTS_SIZE = sizeof(FORK_HEIGHTS) / sizeof(*FORK_HEIGHTS);
 
 /* The index in the FORK_HEIGHTS array that this version of the software will
    support. For example, if CURRENT_FORK_INDEX is 3, this version of the
-   software will support the fork at 600,000 blocks.
+   software will support the fork at 450,000 blocks.
    This will default to zero if the FORK_HEIGHTS array is empty, so you don't
    need to change it manually. */
 const uint8_t CURRENT_FORK_INDEX = FORK_HEIGHTS_SIZE == 0 ? 0 : SOFTWARE_SUPPORTED_FORK_INDEX;
@@ -214,7 +220,7 @@ const uint64_t P2P_DEFAULT_INVOKE_TIMEOUT                    = 60 * 2 * 1000; //
 const size_t   P2P_DEFAULT_HANDSHAKE_INVOKE_TIMEOUT          = 5000;          // 5 seconds
 const char     P2P_STAT_TRUSTED_PUB_KEY[]                    = "";
 
-const char     LATEST_VERSION_URL[]                          = "http://latest.turtlecoin.lol";
+const char     LATEST_VERSION_URL[]                          = "http://latest.cypruscoin.club";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
     {  0xd7, 0x4f, 0x19, 0x25, 0x37, 0x2b, 0xd7, 0x14, 0xfb, 0xe, 0xd7, 0xa4, 0xb6, 0xc1, 0x43, 0xe9  }
